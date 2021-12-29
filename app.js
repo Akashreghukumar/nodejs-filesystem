@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
 
 
 app.post('/post',(req,res)=>{
-    fs.writeFile(`${fname}.txt`, 'Learn Node FS module', function (err) {
+    fs.writeFile(`${fname}.txt`, `${fname}`, function (err) {
         if (err) throw err;
         console.log('File is created successfully.');
         res.send("file created")
